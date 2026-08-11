@@ -3,10 +3,10 @@ export const SITE = {
   site: 'https://your-name.pages.dev',
   title: 'MXT 的个人网站',
   description: '记录技术、分享项目的个人博客与作品集',
-  author: 'MXT',
+  author: 'mxthappy',
   lang: 'zh-CN',
-  email: 'hello@example.com',
-  github: 'https://github.com/your-name'
+  email: '272590522@qq.com',
+  github: 'https://github.com/mxthappy'
 } as const;
 
 // Giscus 评论配置（可选）：部署后填写你的 GitHub 仓库信息，留空则不渲染评论。
