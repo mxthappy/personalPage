@@ -1,0 +1,17 @@
+---
+import { SITE } from '../config';
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-white/5 py-10">
+  <div class="mx-auto flex w-full max-w-5xl flex-col items-center justify-between gap-4 px-5 text-sm text-ink-dim sm:flex-row">
+    <p>
+      © {year} {SITE.author} · 基于 Astro 构建
+    </p>
+    <div class="flex items-center gap-5">
+      <a href="/rss.xml" class="transition hover:text-accent" title="RSS 订阅">RSS</a>
+      <a href={SITE.github} class="transition hover:text-accent" target="_blank" rel="noopener">GitHub</a>
+      <a href={`mailto:${SITE.email}`} class="transition hover:text-accent">联系我</a>
+    </div>
+  </div>
+</footer>

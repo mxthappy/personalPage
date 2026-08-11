@@ -1,0 +1,186 @@
+@import "tailwindcss";
+
+@theme {
+  --color-base: #070b14;
+  --color-surface: #0b1120;
+  --color-surface-2: #111a2e;
+  --color-line: rgb(148 163 184 / 0.14);
+  --color-ink: #e2e8f0;
+  --color-ink-dim: #94a3b8;
+  --color-accent: #22d3ee;
+  --color-accent-2: #a78bfa;
+  --color-accent-3: #f472b6;
+
+  --font-sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", "Cascadia Code",
+    Menlo, Consolas, monospace;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-base font-sans text-ink antialiased;
+  }
+
+  ::selection {
+    background: rgb(34 211 238 / 0.3);
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(148 163 184 / 0.25);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(148 163 184 / 0.4);
+  }
+}
+
+.text-gradient {
+  background: linear-gradient(120deg, #22d3ee, #a78bfa 60%, #f472b6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass {
+  background: rgb(17 26 46 / 0.55);
+  border: 1px solid rgb(148 163 184 / 0.14);
+  backdrop-filter: blur(12px);
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgb(148 163 184 / 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(148 163 184 / 0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, black, transparent 75%);
+}
+
+.article-body {
+  @apply text-[15px] leading-7 text-slate-300;
+}
+
+.article-body h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  scroll-margin-top: 5.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #f1f5f9;
+}
+
+.article-body h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  scroll-margin-top: 5.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+.article-body p {
+  margin: 1rem 0;
+}
+
+.article-body a {
+  color: #22d3ee;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.article-body ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+
+.article-body ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  list-style: decimal;
+}
+
+.article-body li {
+  margin: 0.35rem 0;
+}
+
+.article-body li::marker {
+  color: #22d3ee;
+}
+
+.article-body code:not(pre code) {
+  border-radius: 0.375rem;
+  padding: 0.15rem 0.4rem;
+  background: rgb(148 163 184 / 0.12);
+  color: #a5f3fc;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+}
+
+.article-body pre {
+  margin: 1.25rem 0;
+  overflow-x: auto;
+  border: 1px solid rgb(148 163 184 / 0.14);
+  border-radius: 0.75rem;
+  background: #0a0f1e;
+  padding: 1rem 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.article-body pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+.article-body blockquote {
+  margin: 1.25rem 0;
+  border-left: 3px solid #22d3ee;
+  padding-left: 1rem;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.article-body hr {
+  margin: 2rem 0;
+  border-color: rgb(148 163 184 / 0.15);
+}
+
+.article-body img {
+  margin: 1.25rem 0;
+  border: 1px solid rgb(148 163 184 / 0.12);
+  border-radius: 0.75rem;
+}
+
+.article-body table {
+  margin: 1.25rem 0;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.article-body th,
+.article-body td {
+  border: 1px solid rgb(148 163 184 / 0.15);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.article-body th {
+  background: rgb(148 163 184 / 0.08);
+  color: #f1f5f9;
+}

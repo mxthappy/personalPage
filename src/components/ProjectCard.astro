@@ -1,0 +1,31 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+type Project = CollectionEntry<'projects'>;
+const { project } = Astro.props;
+---
+
+<article class="glass group flex flex-col rounded-2xl p-6 transition duration-300 hover:-translate-y-0.5 hover:border-accent-2/30 hover:shadow-[0_0_30px_rgb(167_139_250/0.08)]">
+  <a href={`/projects/${project.id}/`} class="flex h-full flex-col">
+    <div class="flex items-start justify-between gap-3">
+      <h3 class="text-lg font-semibold text-ink transition group-hover:text-accent-2">
+        {project.data.name}
+      </h3>
+      {project.data.featured && (
+        <span class="rounded-full border border-accent/30 bg-accent/10 px-2.5 py-0.5 text-xs text-accent">
+          精选
+        </span>
+      )}
+    </div>
+    <p class="mt-2 flex-1 text-sm leading-6 text-ink-dim">
+      {project.data.description}
+    </p>
+    <div class="mt-4 flex flex-wrap gap-2">
+      {project.data.techStack.map((tech) => (
+        <span class="rounded-md bg-white/5 px-2 py-0.5 font-mono text-xs text-ink-dim">
+          {tech}
+        </span>
+      ))}
+    </div>
+  </a>
+</article>
