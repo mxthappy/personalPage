@@ -71,9 +71,10 @@ draft: false   # true 时不发布
    选择 `mxthappy/personalPage` 仓库。
 3. 构建设置：框架预设选择 **Astro**，构建命令 `npm run build`，输出目录 `dist`；
    同时在环境变量中添加 `NODE_VERSION=22`（Astro 7 需要 Node.js ≥ 22）。
-4. 保存后首次构建自动触发，完成后会得到一个 `xxx.pages.dev` 免费域名。本项目预设
-   项目名为 `personalpage`（域名 `personalpage.pages.dev`）；若项目名被占用或你改了
-   名字，需同步修改 `src/config.ts` 的 `SITE.site` 并重新推送。
+4. 保存后首次构建自动触发，完成后会得到一个 `xxx.pages.dev` 免费域名。本项目实际
+   项目名为 `personalpage-4s6`（域名 `personalpage-4s6.pages.dev`，因为
+   `personalpage` 已被占用）；若以后改了项目名，需同步修改 `src/config.ts` 的
+   `SITE.site` 并重新推送。
 
 ## 日常维护
 
