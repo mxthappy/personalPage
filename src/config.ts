@@ -1,6 +1,6 @@
 export const SITE = {
-  // 站点真实域名（Cloudflare 部署后的地址）
-  site: 'https://personalpage.maxiaotian-uestc.workers.dev',
+  // 站点真实域名（Cloudflare Pages 部署后的地址，若 Pages 项目名不同请同步修改）
+  site: 'https://personalpage.pages.dev',
   title: 'MXT 的个人网站',
   description: '记录技术、分享项目的个人博客与作品集',
   author: 'mxthappy',

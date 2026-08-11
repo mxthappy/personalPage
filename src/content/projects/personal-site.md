@@ -2,7 +2,7 @@
 name: '个人网站'
 description: '本站：基于 Astro + Tailwind CSS 的中文博客与作品集，暗色科技风，部署在 Cloudflare Pages。'
 techStack: ['Astro', 'Tailwind CSS', 'Cloudflare Pages', 'GitHub']
-link: 'https://your-name.pages.dev'
+link: 'https://personalpage.pages.dev'
 featured: true
 sortOrder: 1
 ---

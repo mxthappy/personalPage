@@ -67,10 +67,13 @@ draft: false   # true 时不发布
 ## 部署到 Cloudflare Pages
 
 1. 将本项目推送到 GitHub 仓库（Giscus 需要公开仓库并开启 Discussions）。
-2. 登录 Cloudflare 控制台 → Workers & Pages → 创建项目 → 连接 GitHub 仓库。
-3. 构建设置：框架预设选择 **Astro**，构建命令 `npm run build`，输出目录 `dist`。
-4. 保存后首次构建自动触发，完成后会得到一个 `xxx.pages.dev` 免费域名。
-5. 把 `src/config.ts` 里的 `SITE.site` 改成该域名，重新推送即可。
+2. 登录 Cloudflare 控制台 → Workers & Pages → 创建 → **Pages** → 连接到 Git，
+   选择 `mxthappy/personalPage` 仓库。
+3. 构建设置：框架预设选择 **Astro**，构建命令 `npm run build`，输出目录 `dist`；
+   同时在环境变量中添加 `NODE_VERSION=22`（Astro 7 需要 Node.js ≥ 22）。
+4. 保存后首次构建自动触发，完成后会得到一个 `xxx.pages.dev` 免费域名。本项目预设
+   项目名为 `personalpage`（域名 `personalpage.pages.dev`）；若项目名被占用或你改了
+   名字，需同步修改 `src/config.ts` 的 `SITE.site` 并重新推送。
 
 ## 日常维护
 
