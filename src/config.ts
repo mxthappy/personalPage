@@ -1,6 +1,6 @@
 export const SITE = {
-  // 部署到 Cloudflare Pages 后，把这里改成你的真实域名，例如 https://mxt.pages.dev
-  site: 'https://your-name.pages.dev',
+  // 站点真实域名（Cloudflare 部署后的地址）
+  site: 'https://personalpage.maxiaotian-uestc.workers.dev',
   title: 'MXT 的个人网站',
   description: '记录技术、分享项目的个人博客与作品集',
   author: 'mxthappy',
